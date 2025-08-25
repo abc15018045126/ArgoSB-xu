@@ -1,0 +1,209 @@
+
+:root {
+  --background: #1a1a1a;
+  --surface: #2c2c2c;
+  --primary: #007bff;
+  --primary-hover: #0056b3;
+  --text-primary: #f0f0f0;
+  --text-secondary: #a0a0a0;
+  --border-color: #444;
+  --success: #28a745;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--background);
+  color: var(--text-primary);
+  line-height: 1.6;
+  padding: 2rem 1rem;
+}
+
+#root {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+header {
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+header h1 .emoji {
+  display: inline-block;
+  transform: rotate(-15deg);
+}
+
+header p {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+fieldset {
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+  background-color: var(--surface);
+}
+
+legend {
+  font-size: 1.25rem;
+  font-weight: 500;
+  padding: 0 0.5rem;
+  margin-left: 1rem;
+  color: var(--text-primary);
+}
+
+.fieldset-description {
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+    padding: 0 0.5rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.form-group .input-group {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.form-group .input-group input {
+    flex-grow: 1;
+}
+
+input[type="text"],
+select {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: var(--background);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  color: var(--text-primary);
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input[type="text"]:focus,
+select:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.checkbox-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+.checkbox-item {
+  display: flex;
+  align-items: center;
+  background-color: var(--background);
+  padding: 0.75rem;
+  border-radius: 4px;
+  border: 1px solid var(--border-color);
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.checkbox-item:hover {
+    background-color: #333;
+}
+
+.checkbox-item input[type="checkbox"] {
+  margin-right: 0.75rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  accent-color: var(--primary);
+}
+
+button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: 'Inter', sans-serif;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: var(--primary);
+  color: white;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: var(--primary-hover);
+}
+
+button.secondary {
+    background-color: #4a4a4a;
+}
+
+button.secondary:hover {
+    background-color: #5a5a5a;
+}
+
+
+.output-section {
+    position: relative;
+}
+
+.output-section textarea {
+  width: 100%;
+  min-height: 120px;
+  padding: 1rem;
+  padding-right: 90px;
+  background-color: #111;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  color: #f0f0f0;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.9rem;
+  resize: vertical;
+  white-space: pre;
+  word-wrap: normal;
+  overflow-x: auto;
+}
+
+.output-section button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.5rem 1rem;
+}
+
+.output-section button.copied {
+    background-color: var(--success);
+}

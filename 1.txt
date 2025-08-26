@@ -1,0 +1,1 @@
+export vmpt="13726" argo="y" agn="githubvps.abc15018045126.dpdns.org" agk="eyJhIjoiMGU2MDk0M2E3YjM5Yzk5OTQyMTY5MmQ0ODg2ZWFlNTQiLCJ0IjoiZTAxMWU2N2ItMjE3MS00ZmQ1LWIxYTYtZjRiNDU4MTVkMWNiIiwicyI6Ik56UXdPVFUzTm1NdE1tTmhPQzAwWm1JMkxXSXdaVE10TWpReVlqUmhNekJoWWpKaiJ9"  && bash <(curl -Ls https://raw.githubusercontent.com/abc15018045126/ArgoSB-xu/main/argosb.sh)
